@@ -1,55 +1,137 @@
-/* Stili për trupin (body) */
+
+/* Body me sfond */
 body {
   margin: 0;
-  font-family: sans-serif;
-  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
   background: url('20240904_010105.jpg') no-repeat center center fixed;
-  background-size: 50% auto;
+  background-size: cover;
 }
 
-/* Mbulesa e sfondit për errësim */
+/* Mbulesa errësuese */
 .background-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.65);
   min-height: 100vh;
-  padding: 20px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Stili për headerin */
+/* Header */
 header {
   text-align: center;
-  padding: 50px 20px;
+  margin-bottom: 40px;
 }
 
-/* Butonat e thirrjes dhe rrjeteve sociale */
+header h1 {
+  font-size: 4rem;             /* Më e madhe */
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;   /* Me shkronja kapitale */
+  font-weight: bold;
+}
+
+/* Butonat */
 .call-button,
 .social-button {
   background-color: #c6a77d;
-  color: white;
-  padding: 10px 20px;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 10px 8px 0;
+  border-radius: 30px;
+  font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  margin: 10px 5px;
-  border-radius: 5px;
-  font-weight: bold;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(198, 167, 125, 0.4);
 }
 
 .call-button:hover,
 .social-button:hover {
-  background-color: #b8956b;
+  background-color: #b5955d;
+  box-shadow: 0 6px 12px rgba(181, 149, 93, 0.6);
 }
 
-/* Seksionet e shërbimeve dhe galerisë */
-.services,
-.gallery {
-  padding: 30px 20px;
-  max-width: 800px;
-  margin: auto;
+/* Seksioni i shërbimeve */
+.services {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
 }
 
-/* Fundfaqja (footer) */
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c6a77d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.services ul li {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.services ul li::before {
+  content: "✓";
+  color: #c6a77d;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Seksioni info */
+.info {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c6a77d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.info p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 15px 10px;
+  font-size: 0.9rem;
   background-color: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #c6a77d;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .services h2,
+  .info h2 {
+    font-size: 1.5rem;
+  }
+
+  .call-button,
+  .social-button {
+    padding: 10px 16px;
+    margin: 8px 5px 0;
+  }
 }
