@@ -1,1 +1,42 @@
 
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  background: url('your-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.background-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.call-button, .social-button {
+  background: #c6a77d;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.services, .gallery {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
