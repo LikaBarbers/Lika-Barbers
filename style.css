@@ -4,7 +4,7 @@ body {
   font-family: sans-serif;
   color: white;
   background: url('20240904_010105.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-size: contain;
 }
 
 /* Mbulesa e sfondit për errësim */
