@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f8f2e7; /* ngjyra kremi */
+  color: #333;
+}
+
+header {
+  background-color: #c6a77d;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.call-button {
+  background: white;
+  color: #c6a77d;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.services, .gallery {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+}
