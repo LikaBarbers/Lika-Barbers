@@ -16,7 +16,7 @@ body {
 }
 
 .logo-strip {
-  max-height: 86px;
+  max-height: 100px;
   object-fit: contain;
 }
 
@@ -178,6 +178,6 @@ footer {
   }
 
   .logo-strip {
-    max-height: 65px;
+    max-height: 80px;
   }
 }
