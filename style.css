@@ -1,4 +1,4 @@
-/* Trupi pa sfond fillimisht */
+/* Trupi i faqes */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,26 +8,26 @@ body {
 /* Shiriti i logos */
 .logo-banner {
   width: 100%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-strip {
-  width: 100%;
-  max-height: 100px; /* LOGO më e madhe */
-  object-fit: cover;
+  max-height: 60px;
+  object-fit: contain;
 }
 
-/* Background-i fillon poshtë logos */
+/* Background që fillon poshtë logos */
 .background-overlay {
   background: url('20190714_130242.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.65);
   background-blend-mode: overlay;
   min-height: 100vh;
-  padding: 20px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,6 +49,11 @@ body {
   border-radius: 10px;
   padding: 6px 14px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #b5955d;
 }
 
 .menu {
@@ -60,6 +65,7 @@ body {
   border-radius: 10px;
   display: none;
   flex-direction: column;
+  animation: slideDown 0.3s ease forwards;
   min-width: 180px;
 }
 
@@ -74,6 +80,17 @@ body {
 .menu li a:hover {
   background-color: #c6a77d;
   color: black;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Ikonat e kontaktit */
@@ -100,13 +117,13 @@ body {
 }
 
 /* Seksionet */
-section {
+.services, .products, .info {
   max-width: 600px;
   margin: 0 auto 50px;
   padding: 0 20px;
 }
 
-section h2 {
+.services h2, .products h2, .info h2 {
   font-size: 2rem;
   margin-bottom: 15px;
   border-bottom: 2px solid #c6a77d;
@@ -114,24 +131,29 @@ section h2 {
   padding-bottom: 5px;
 }
 
-section ul {
+.services ul, .products ul {
   list-style: none;
   padding: 0;
   font-size: 1.2rem;
 }
 
-section ul li {
+.services ul li, .products ul li {
   margin-bottom: 10px;
   padding-left: 15px;
   position: relative;
 }
 
-section ul li::before {
+.services ul li::before, .products ul li::before {
   content: "✓";
   color: #c6a77d;
   position: absolute;
   left: 0;
   font-weight: bold;
+}
+
+.info p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
 /* Footer */
@@ -156,7 +178,6 @@ footer {
   }
 
   .logo-strip {
-    max-height: 100px; /* madhësi më e vogël për pajisje të vogla */
+    max-height: 45px;
   }
 }
-
