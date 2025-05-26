@@ -5,8 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lika Barbers</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+
+  <!-- Shiriti i logos -->
+  <div class="logo-banner">
+    <img src="20240904_010105.jpg" alt="Lika Barbers Logo" class="logo-strip" />
+  </div>
+
+  <!-- Background pas logos -->
   <div class="background-overlay">
 
     <!-- Navbar -->
@@ -20,17 +28,14 @@
       </ul>
     </nav>
 
-    <!-- Header me logon -->
-    <header>
-      <img src="lika-barbers-high-resolution-logo.png" alt="Lika Barbers Logo" class="logo" />
-      <a class="call-button" href="tel:+355692366263">Telefono tani</a>
-      <a class="social-button" href="https://instagram.com/Lika.barbers" target="_blank" rel="noopener noreferrer">Na ndiq në Instagram</a>
-    </header>
+    <!-- Ikonat e kontaktit -->
+    <div class="contact-icons">
+      <a href="tel:+355692366263" class="icon-link"><i class="fas fa-phone"></i></a>
+      <a href="https://wa.me/355692366263?text=Pershendetje,+dua+te+rezervoj+nje+takim" target="_blank" class="icon-link"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/Lika.barbers" target="_blank" class="icon-link"><i class="fab fa-instagram"></i></a>
+    </div>
 
-    <a class="booking-button" href="https://wa.me/355692366263?text=Pershendetje,+dua+te+rezervoj+nje+takim" target="_blank">
-      Rezervo tani në WhatsApp
-    </a>
-
+    <!-- Seksioni Sherbimeve -->
     <section class="services" id="services">
       <h2>Shërbimet</h2>
       <ul>
@@ -41,18 +46,30 @@
       </ul>
     </section>
 
+    <!-- Seksioni Produkteve -->
+    <section class="products" id="products">
+      <h2>Produktet</h2>
+      <ul>
+        <li>Pomadë për flokë</li>
+        <li>Vaj për mjekër</li>
+        <li>Shampo për skalp të ndjeshëm</li>
+        <li>Spray stilues</li>
+      </ul>
+    </section>
+
+    <!-- Seksioni Info -->
     <section class="info" id="info">
       <h2>Info</h2>
       <p><strong>Adresa:</strong> Bllok, Tiranë, Albania</p>
       <p><strong>Orari:</strong> Hënë - Shtunë 10:00 - 21:00</p>
     </section>
 
+    <!-- Footer -->
     <footer>
       <p>© 2015 Lika Barbers</p>
     </footer>
   </div>
 
-  <!-- Script për menunë -->
   <script>
     const menu = document.getElementById('mainMenu');
     const toggleBtn = document.querySelector('.menu-toggle');
