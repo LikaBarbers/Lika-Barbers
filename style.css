@@ -9,10 +9,16 @@ body {
 .logo-banner {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.95);
-  padding: 50px 0;
+  padding: 70px 0; /* më shumë hapësirë lart dhe poshtë */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo-strip {
+  max-height: 120px; /* më shumë madhësi për logon */
+  object-fit: contain;
+}
 }
 
 .logo-strip {
