@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -9,16 +10,27 @@
 <body>
   <div class="background-overlay">
     <header>
-  <img src="20240904_010105.jpg" alt="Lika Barbers Logo" class="logo" />
-  <a class="call-button" href="tel:+355692366263">Telefono tani</a>
-  <a class="social-button" href="https://instagram.com/Lika.barbers" target="_blank" rel="noopener noreferrer">Na ndiq në Instagram</a>
+      <img src="20240904_010105.jpg" alt="Lika Barbers Logo" class="logo" />
+
+      <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="menu" id="mainMenu">
+          <li><a href="#kryesore">Menuja Kryesore</a></li>
+          <li><a href="#sherbimet">Shërbimet</a></li>
+          <li><a href="#produktet">Produktet</a></li>
+          <li><a href="#info">Rreth Meje</a></li>
+        </ul>
+      </nav>
+
+      <a class="call-button" href="tel:+355692366263">Telefono tani</a>
+      <a class="social-button" href="https://instagram.com/Lika.barbers" target="_blank" rel="noopener noreferrer">Na ndiq në Instagram</a>
     </header>
 
     <a class="booking-button" href="https://wa.me/355692366263?text=Pershendetje,+dua+te+rezervoj+nje+takim" target="_blank">
       Rezervo tani në WhatsApp
     </a>
 
-    <section class="services">
+    <section id="sherbimet" class="services">
       <h2>Shërbimet</h2>
       <ul>
         <li>Prerje floku</li>
@@ -28,7 +40,16 @@
       </ul>
     </section>
 
-    <section class="info">
+    <section id="produktet" class="services">
+      <h2>Produktet</h2>
+      <ul>
+        <li>Vaj për mjekër</li>
+        <li>Pomadë për flokë</li>
+        <li>Shampo speciale</li>
+      </ul>
+    </section>
+
+    <section id="info" class="info">
       <h2>Info</h2>
       <p><strong>Adresa:</strong> Bllok, Tiranë, Albania</p>
       <p><strong>Orari:</strong> Hënë - Shtunë 10:00 - 21:00</p>
@@ -38,5 +59,12 @@
       <p>© 2015 Lika Barbers</p>
     </footer>
   </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mainMenu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 </body>
 </html>
