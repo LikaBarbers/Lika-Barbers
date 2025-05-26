@@ -29,7 +29,7 @@ header {
 /* Logo në qendër lart */
 .logo {
   display: block;
-  max-width: 200px;
+  max-width: 100px;
   height: auto;
   margin: 0 auto 20px auto;
 }
