@@ -9,7 +9,7 @@ body {
 .logo-banner {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.95);
-  padding: 35px 0; /* ishte 70px */
+  padding: 35px 0; /* më e vogël se më parë */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,9 +17,9 @@ body {
 
 .logo-strip {
   width: 100%;
-  max-height: 60px; /* ishte 120px */
+  max-height: 60px; /* më e vogël se më parë */
   object-fit: cover;
-}
+  max-width: 400px;
 }
 
 /* Background që fillon poshtë logos */
@@ -180,6 +180,6 @@ footer {
   }
 
   .logo-strip {
-    max-height: 80px;
+    max-height: 45px;
   }
 }
