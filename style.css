@@ -17,22 +17,67 @@ body {
   justify-content: space-between;
 }
 
-/* Header i modifikuar për të qendruar në qendër */
+/* Header */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
   text-align: center;
+  position: relative;
 }
 
-/* Logo në qendër lart */
 .logo {
-  display: block;
   max-width: 100px;
   height: auto;
-  margin: 0 auto 20px auto;
+  margin-bottom: 20px;
 }
+
+/* Menu e sipërme */
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  padding: 10px 0;
+  margin: 10px 0 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  border: 1px solid #c6a77d;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu li a:hover {
+  background-color: #c6a77d;
+  color: black;
 }
 
 /* Butonat */
@@ -141,22 +186,19 @@ footer {
 
 /* Responsive */
 @media (max-width: 600px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  .services h2,
-  .info h2 {
-    font-size: 1.5rem;
-  }
-
-  .call-button,
-  .social-button {
-    padding: 10px 16px;
-    margin: 8px 5px 0;
-  }
-
   .logo {
     max-width: 150px;
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+  }
+
+  .menu li a {
+    padding: 8px 16px;
+  }
+
+  header {
+    padding-top: 20px;
   }
 }
