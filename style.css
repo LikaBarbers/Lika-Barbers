@@ -9,23 +9,16 @@ body {
 .logo-banner {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.95);
-  padding: 70px 0; /* më shumë hapësirë lart dhe poshtë */
+  padding: 70px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-strip {
-  max-height: 120px; /* më shumë madhësi për logon */
-  object-fit: contain;
-}
-}
-
-.logo-strip {
   width: 100%;
   max-height: 120px;
   object-fit: cover;
-}
 }
 
 /* Background që fillon poshtë logos */
@@ -186,6 +179,6 @@ footer {
   }
 
   .logo-strip {
-    max-height: 45px;
+    max-height: 80px;
   }
 }
