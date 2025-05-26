@@ -16,7 +16,7 @@ body {
 }
 
 .logo-strip {
-  max-height: 200px;
+  max-height: 180px;
   object-fit: contain;
 }
 
