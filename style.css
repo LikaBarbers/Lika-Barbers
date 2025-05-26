@@ -134,4 +134,19 @@ footer {
     padding: 10px 16px;
     margin: 8px 5px 0;
   }
+}.booking-button {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 15px auto;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.booking-button:hover {
+  background-color: #1ebc59;
 }
