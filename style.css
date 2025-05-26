@@ -143,8 +143,8 @@ footer {
   display: inline-block;
   margin: 15px auto;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
+  background-color: #b5955d;
+  box-shadow: 0 6px 12px rgba(181, 149, 93, 0.6);
 }
 
 .booking-button:hover {
