@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -7,6 +6,7 @@
   <title>Lika Barbers</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
 </head>
 <body>
 
@@ -26,6 +26,7 @@
         <li><a href="#">Menuja Kryesore</a></li>
         <li><a href="#services">Shërbimet</a></li>
         <li><a href="#products">Produktet</a></li>
+        <li><a href="#gallery">Galeria</a></li>
         <li><a href="#info">Informacion mbi mua</a></li>
       </ul>
     </nav>
@@ -51,23 +52,70 @@
     <!-- Seksioni Produkteve -->
     <section class="products" id="products">
       <h2>Produktet</h2>
-      <ul>
-        <li>Pomadë për flokë</li>
-        <li>Vaj për mjekër</li>
-        <li>Shampo për skalp të ndjeshëm</li>
-        <li>Spray stilues</li>
-      </ul>
+      <div class="gallery-category">
+        <div class="gallery-grid">
+
+          <div class="product-card">
+            <a href="produkt1.jpg" data-lightbox="produktet" data-title="Pomadë flokësh">
+              <img src="produkt1.jpg" alt="Pomadë flokësh" />
+            </a>
+            <div class="product-info">
+              <h4>Pomadë flokësh</h4>
+              <p>Stilim i fortë, me shkëlqim dhe aromë të freskët.</p>
+              <span class="price">700 Lekë</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="produkt2.jpg" data-lightbox="produktet" data-title="Vaj për mjekër">
+              <img src="produkt2.jpg" alt="Vaj për mjekër" />
+            </a>
+            <div class="product-info">
+              <h4>Vaj për mjekër</h4>
+              <p>Hidratues dhe aromatik për kujdesin e mjekrës.</p>
+              <span class="price">500 Lekë</span>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="produkt3.jpg" data-lightbox="produktet" data-title="Shampo për skalp">
+              <img src="produkt3.jpg" alt="Shampo për skalp" />
+            </a>
+            <div class="product-info">
+              <h4>Shampo për skalp</h4>
+              <p>Për skalp të ndjeshëm dhe flokë të shëndetshëm.</p>
+              <span class="price">600 Lekë</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="gallery" id="gallery">
+      <h2>Galeria</h2>
+
+      <div class="gallery-category">
+        <h3>Prerje dhe Stilime</h3>
+        <div class="gallery-grid">
+          <a href="stilim1.jpg" data-lightbox="stilime" data-title="Stilim modern">
+            <img src="stilim1.jpg" alt="Stilim modern" />
+          </a>
+          <a href="stilim2.jpg" data-lightbox="stilime" data-title="Stilim klasik">
+            <img src="stilim2.jpg" alt="Stilim klasik" />
+          </a>
+          <a href="stilim3.jpg" data-lightbox="stilime" data-title="Mjekër e stiluar">
+            <img src="stilim3.jpg" alt="Mjekër e stiluar" />
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Seksioni Info -->
     <section class="info" id="info">
       <h2>Info</h2>
-      <p>
-        <strong>Adresa:</strong>
-        <a href="https://maps.app.goo.gl/rB11wMr7TDi3Q6eW6" target="_blank" class="maps-link">
-          <i class="fas fa-map-marker-alt"></i> Bllok, Tiranë, Albania
-        </a>
-      </p>
+      <p><strong>Adresa:</strong> <a href="https://maps.app.goo.gl/rB11wMr7TDi3Q6eW6" target="_blank"><i class="fas fa-map-marker-alt"></i> Bllok, Tiranë, Albania</a></p>
       <p><strong>Orari:</strong> Hënë - Shtunë 10:00 - 21:00</p>
     </section>
 
@@ -96,5 +144,8 @@
       }
     });
   </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
+
