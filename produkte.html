@@ -1,109 +1,76 @@
+
 <!DOCTYPE html>
+
 <html lang="sq">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produktet - Lika Barbers</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Produktet | Lika Barbers</title>
+
+<link rel="stylesheet" href="style.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
+
+lightbox2/2.11.4/css/lightbox.min.css" />
+
 </head>
+
 <body>
 
-  <!-- Shiriti i logos -->
-  <div class="logo-banner">
-    <img src="20240904_010105.jpg" alt="Lika Barbers Logo" class="logo-strip" />
-    <li>Ndoshta nuk mundem te te rregulloj dot jeten... por floket ti qaj!</li>
-  </div>
+<div class="background-overlay">
 
-  <!-- Background pas logos -->
-  <div class="background-overlay">
+<nav class="navbar">
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <ul class="menu" id="mainMenu">
-        <li><a href="index.html">Menuja Kryesore</a></li>
-        <li><a href="#hair-products">Produktet për Flokë</a></li>
-        <li><a href="#beard-products">Produktet për Mjekër</a></li>
-        <li><a href="#scalp-products">Produktet për Skalpin</a></li>
-      </ul>
-    </nav>
+<button class="menu-toggle" onclick="toggleMenu()">E</button>
 
-    <!-- Ikonat e kontaktit -->
-    <div class="contact-icons">
-      <a href="tel:+355692366263" class="icon-link"><i class="fas fa-phone"></i></a>
-      <a href="https://wa.me/355692366263?text=Pershendetje,+dua+te+rezervoj+nje+takim" target="_blank" class="icon-link"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://instagram.com/Lika.barbers" target="_blank" class="icon-link"><i class="fab fa-instagram"></i></a>
-    </div>
+<ul class="menu" id="main Menu"> <li><a href="index.html">Kthehu te Faqja Kryesore</a></li> </ul>
 
-    <!-- Produktet -->
-    <section class="products" id="hair-products">
-      <h2>Produktet për Flokë</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="pomade.jpg" alt="Pomadë për flokë" />
-          <h3>Pomadë për flokë</h3>
-          <p>Pomadë me mbajtje të fortë dhe shkëlqim natyral.</p>
-          <p class="price">Çmimi: 1200 ALL</p>
-        </div>
-        <div class="product-card">
-          <img src="spray.jpg" alt="Spray stilues" />
-          <h3>Spray stilues</h3>
-          <p>Spray për stilim të shpejtë dhe rezistent.</p>
-          <p class="price">Çmimi: 1000 ALL</p>
-        </div>
-      </div>
-    </section>
+</nav>
 
-    <section class="products" id="beard-products">
-      <h2>Produktet për Mjekër</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="oil-beard.jpg" alt="Vaj për mjekër" />
-          <h3>Vaj për mjekër</h3>
-          <p>Vaj natyral për ushqim dhe shkëlqim të mjekrës.</p>
-          <p class="price">Çmimi: 1500 ALL</p>
-        </div>
-      </div>
-    </section>
+<section class="products" id="products">
 
-    <section class="products" id="scalp-products">
-      <h2>Produktet për Skalpin</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="shampoo.jpg" alt="Shampo për skalp të ndjeshëm" />
-          <h3>Shampo për skalp të ndjeshëm</h3>
-          <p>Shampo me formulë të butë për skalp të ndjeshëm.</p>
-          <p class="price">Çmimi: 1300 ALL</p>
-        </div>
-      </div>
-    </section>
+<h2>Produktet</h2>
 
-    <!-- Footer -->
-    <footer>
-      <p>© 2015 Lika Barbers</p>
-    </footer>
+<!-- Kategoria 1: Pomada & Stilim -->
 
-  </div>
+<h3 class="category-title">Pomada & Stilim</h3>
 
-  <script>
-    const menu = document.getElementById('mainMenu');
-    const toggleBtn = document.querySelector('.menu-toggle');
+<div class="gallery-grid">
 
-    function toggleMenu() {
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-      } else {
-        menu.style.display = 'flex';
-      }
-    }
+<div class="product-card">
 
-    document.addEventListener('click', function (event) {
-      const isClickInside = menu.contains(event.target) || toggleBtn.contains(event.target);
-      if (!isClickInside) {
-        menu.style.display = 'none';
-      }
-    });
-  </script>
-</body>
-</html>
+<a href="produkt1.jpg" data-lightbox="stilim" data-title="Pomadë
+
+flokësh">
+
+<img src="produkt1.jpg" alt="Pomadë flokësh" />
+
+</a>
+
+<div class="product-info">
+
+<h4>Pomadë flokësh</h4>
+
+<p>Stilim i fortë, shkëlqim natyral.</p>
+
+<span class="price">700 Lekë</span>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<a href="produkt4.jpg" data-lightbox="stilim" data-title="Spray stilues"> <img src="produkt4.jpg" alt="Spray stilues" /> </a>
+
+<div class="product-info">
+
+<h4>Spray stilues</h4> <p>Mbajtje e lehtë, për çdo stil.</p> <span class="price">450 Lekë</span> </div>
+
+</div>
+
+<
