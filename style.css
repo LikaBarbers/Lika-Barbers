@@ -1,11 +1,9 @@
-/* Trupi i faqes */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
 }
 
-/* Shiriti i logos */
 .logo-banner {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.95);
@@ -13,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .logo-strip {
@@ -20,7 +19,6 @@ body {
   object-fit: contain;
 }
 
-/* Background që fillon poshtë logos */
 .background-overlay {
   background: url('20190714_130242.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -33,7 +31,6 @@ body {
   justify-content: space-between;
 }
 
-/* Navbar */
 .navbar {
   position: absolute;
   top: 20px;
@@ -93,7 +90,6 @@ body {
   }
 }
 
-/* Ikonat e kontaktit */
 .contact-icons {
   display: flex;
   justify-content: center;
@@ -116,14 +112,13 @@ body {
   color: #000;
 }
 
-/* Seksionet */
-.services, .products, .info {
-  max-width: 600px;
+.services, .products, .info, .gallery {
+  max-width: 800px;
   margin: 0 auto 50px;
   padding: 0 20px;
 }
 
-.services h2, .products h2, .info h2 {
+.services h2, .products h2, .info h2, .gallery h2 {
   font-size: 2rem;
   margin-bottom: 15px;
   border-bottom: 2px solid #c6a77d;
@@ -156,7 +151,11 @@ body {
   margin-bottom: 10px;
 }
 
-/* Footer */
+.info a {
+  color: #c6a77d;
+  text-decoration: none;
+}
+
 footer {
   text-align: center;
   padding: 15px 10px;
@@ -166,7 +165,65 @@ footer {
   color: #ddd;
 }
 
-/* Responsive */
+/* Galeria */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Produktet me përshkrim dhe çmim */
+.product-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #c6a77d;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.product-info h4 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.product-info p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin: 4px 0;
+}
+
+.product-info .price {
+  font-weight: bold;
+  color: #c6a77d;
+  display: block;
+  margin-top: 6px;
+}
+
 @media (max-width: 600px) {
   .menu-toggle {
     font-size: 1.8rem;
@@ -180,19 +237,4 @@ footer {
   .logo-strip {
     max-height: 120px;
   }
-}
-/* Linku i adresës me ikonë të Maps */
-.maps-link {
-  color: #c6a77d;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.maps-link i {
-  margin-right: 6px;
-}
-
-.maps-link:hover {
-  color: #b5955d;
-  text-decoration: underline;
 }
