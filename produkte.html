@@ -1,76 +1,98 @@
-
 <!DOCTYPE html>
-
 <html lang="sq">
-
 <head>
-
-<meta charset="UTF-8" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>Produktet | Lika Barbers</title>
-
-<link rel="stylesheet" href="style.css" />
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
-
-lightbox2/2.11.4/css/lightbox.min.css" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produktet | Lika Barbers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
 </head>
-
 <body>
 
-<div class="background-overlay">
+  <div class="background-overlay">
 
-<nav class="navbar">
+    <nav class="navbar">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="menu" id="mainMenu">
+        <li><a href="index.html">Kthehu te Faqja Kryesore</a></li>
+      </ul>
+    </nav>
 
-<button class="menu-toggle" onclick="toggleMenu()">E</button>
+    <section class="products" id="products">
+      <h2>Produktet</h2>
 
-<ul class="menu" id="main Menu"> <li><a href="index.html">Kthehu te Faqja Kryesore</a></li> </ul>
+      <!-- Kategoria 1: Pomada & Stilim -->
+      <h3 class="category-title">Pomada & Stilim</h3>
+      <div class="gallery-grid">
 
-</nav>
+        <div class="product-card">
+          <a href="produkt1.jpg" data-lightbox="stilim" data-title="Pomadë flokësh">
+            <img src="produkt1.jpg" alt="Pomadë flokësh" />
+          </a>
+          <div class="product-info">
+            <h4>Pomadë flokësh</h4>
+            <p>Stilim i fortë, shkëlqim natyral.</p>
+            <span class="price">700 Lekë</span>
+          </div>
+        </div>
 
-<section class="products" id="products">
+        <div class="product-card">
+          <a href="produkt4.jpg" data-lightbox="stilim" data-title="Spray stilues">
+            <img src="produkt4.jpg" alt="Spray stilues" />
+          </a>
+          <div class="product-info">
+            <h4>Spray stilues</h4>
+            <p>Mbajtje e lehtë, për çdo stil.</p>
+            <span class="price">450 Lekë</span>
+          </div>
+        </div>
 
-<h2>Produktet</h2>
+      </div>
 
-<!-- Kategoria 1: Pomada & Stilim -->
+      <!-- Kategoria 2: Vajra për Mjekër -->
+      <h3 class="category-title">Vajra për Mjekër</h3>
+      <div class="gallery-grid">
 
-<h3 class="category-title">Pomada & Stilim</h3>
+        <div class="product-card">
+          <a href="vaj1.jpg" data-lightbox="vajra" data-title="Vaj për mjekër natyral">
+            <img src="vaj1.jpg" alt="Vaj për mjekër" />
+          </a>
+          <div class="product-info">
+            <h4>Vaj për mjekër natyral</h4>
+            <p>Ndihmon në hidratimin dhe stilimin e mjekrës.</p>
+            <span class="price">900 Lekë</span>
+          </div>
+        </div>
 
-<div class="gallery-grid">
+        <!-- Shto produkte të tjera këtu -->
 
-<div class="product-card">
+      </div>
 
-<a href="produkt1.jpg" data-lightbox="stilim" data-title="Pomadë
+    </section>
 
-flokësh">
+  </div>
 
-<img src="produkt1.jpg" alt="Pomadë flokësh" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
-</a>
+  <script>
+    const menu = document.getElementById('mainMenu');
+    const toggleBtn = document.querySelector('.menu-toggle');
 
-<div class="product-info">
+    function toggleMenu() {
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    }
 
-<h4>Pomadë flokësh</h4>
+    document.addEventListener('click', function (event) {
+      const isClickInside = menu.contains(event.target) || toggleBtn.contains(event.target);
+      if (!isClickInside) {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
 
-<p>Stilim i fortë, shkëlqim natyral.</p>
-
-<span class="price">700 Lekë</span>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<a href="produkt4.jpg" data-lightbox="stilim" data-title="Spray stilues"> <img src="produkt4.jpg" alt="Spray stilues" /> </a>
-
-<div class="product-info">
-
-<h4>Spray stilues</h4> <p>Mbajtje e lehtë, për çdo stil.</p> <span class="price">450 Lekë</span> </div>
-
-</div>
-
-<
+</body>
+</html>
