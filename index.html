@@ -10,116 +10,60 @@
 </head>
 <body>
 
-  <!-- Shiriti i logos -->
   <div class="logo-banner">
     <img src="20240904_010105.jpg" alt="Lika Barbers Logo" class="logo-strip" />
-    <li>Ndoshta nuk mundem te te rregulloj dot jeten... por floket ti qaj!</li>
+    <li>Ndoshta nuk mundem të të rregulloj dot jetën... por flokët t'i qaj!</li>
   </div>
 
-  <!-- Background pas logos -->
   <div class="background-overlay">
-
-    <!-- Navbar -->
     <nav class="navbar">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <ul class="menu" id="mainMenu">
         <li><a href="#">Menuja Kryesore</a></li>
         <li><a href="#services">Shërbimet</a></li>
-        <li><a href="#products">Produktet</a></li>
-        <li><a href="#gallery">Galeria</a></li>
+        <li><a href="produkte.html">Produktet</a></li>
         <li><a href="#info">Informacion mbi mua</a></li>
       </ul>
     </nav>
 
-    <!-- Ikonat e kontaktit -->
     <div class="contact-icons">
       <a href="tel:+355692366263" class="icon-link"><i class="fas fa-phone"></i></a>
       <a href="https://wa.me/355692366263?text=Pershendetje,+dua+te+rezervoj+nje+takim" target="_blank" class="icon-link"><i class="fab fa-whatsapp"></i></a>
       <a href="https://instagram.com/Lika.barbers" target="_blank" class="icon-link"><i class="fab fa-instagram"></i></a>
     </div>
 
-    <!-- Seksioni Sherbimeve -->
     <section class="services" id="services">
       <h2>Shërbimet</h2>
       <ul>
-        <li>Prerje floku</li>
+        <li>Prerje flokësh</li>
         <li>Stilim mjekre</li>
         <li>Rroje tradicionale</li>
         <li>Pastrim fytyre me fill ose dyll</li>
       </ul>
     </section>
 
-    <!-- Seksioni Produkteve -->
-    <section class="products" id="products">
-      <h2>Produktet</h2>
-      <div class="gallery-category">
-        <div class="gallery-grid">
-
-          <div class="product-card">
-            <a href="produkt1.jpg" data-lightbox="produktet" data-title="Pomadë flokësh">
-              <img src="produkt1.jpg" alt="Pomadë flokësh" />
-            </a>
-            <div class="product-info">
-              <h4>Pomadë flokësh</h4>
-              <p>Stilim i fortë, me shkëlqim dhe aromë të freskët.</p>
-              <span class="price">700 Lekë</span>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <a href="produkt2.jpg" data-lightbox="produktet" data-title="Vaj për mjekër">
-              <img src="produkt2.jpg" alt="Vaj për mjekër" />
-            </a>
-            <div class="product-info">
-              <h4>Vaj për mjekër</h4>
-              <p>Hidratues dhe aromatik për kujdesin e mjekrës.</p>
-              <span class="price">500 Lekë</span>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <a href="produkt3.jpg" data-lightbox="produktet" data-title="Shampo për skalp">
-              <img src="produkt3.jpg" alt="Shampo për skalp" />
-            </a>
-            <div class="product-info">
-              <h4>Shampo për skalp</h4>
-              <p>Për skalp të ndjeshëm dhe flokë të shëndetshëm.</p>
-              <span class="price">600 Lekë</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Galeria -->
-    <section class="gallery" id="gallery">
-      <h2>Galeria</h2>
-
-      <div class="gallery-category">
-        <h3>Prerje dhe Stilime</h3>
-        <div class="gallery-grid">
-          <a href="stilim1.jpg" data-lightbox="stilime" data-title="Stilim modern">
-            <img src="stilim1.jpg" alt="Stilim modern" />
-          </a>
-          <a href="stilim2.jpg" data-lightbox="stilime" data-title="Stilim klasik">
-            <img src="stilim2.jpg" alt="Stilim klasik" />
-          </a>
-          <a href="stilim3.jpg" data-lightbox="stilime" data-title="Mjekër e stiluar">
-            <img src="stilim3.jpg" alt="Mjekër e stiluar" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seksioni Info -->
     <section class="info" id="info">
       <h2>Info</h2>
       <p><strong>Adresa:</strong> <a href="https://maps.app.goo.gl/rB11wMr7TDi3Q6eW6" target="_blank"><i class="fas fa-map-marker-alt"></i> Bllok, Tiranë, Albania</a></p>
       <p><strong>Orari:</strong> Hënë - Shtunë 10:00 - 21:00</p>
     </section>
 
-    <!-- Footer -->
+    <!-- Galeria e reklamave në formë galerie në faqen kryesore -->
+    <section class="gallery" id="gallery">
+      <h2>Galeria e Punimeve</h2>
+      <div class="gallery-grid">
+        <a href="gallery1.jpg" data-lightbox="gallery" data-title="Prerje moderne flokësh">
+          <img src="gallery1.jpg" alt="Prerje moderne flokësh" />
+        </a>
+        <a href="gallery2.jpg" data-lightbox="gallery" data-title="Stilim i mjekrës">
+          <img src="gallery2.jpg" alt="Stilim i mjekrës" />
+        </a>
+        <a href="gallery3.jpg" data-lightbox="gallery" data-title="Transformim total">
+          <img src="gallery3.jpg" alt="Transformim total" />
+        </a>
+      </div>
+    </section>
+
     <footer>
       <p>© 2015 Lika Barbers</p>
     </footer>
@@ -130,11 +74,7 @@
     const toggleBtn = document.querySelector('.menu-toggle');
 
     function toggleMenu() {
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-      } else {
-        menu.style.display = 'flex';
-      }
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
     }
 
     document.addEventListener('click', function (event) {
