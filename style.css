@@ -13,6 +13,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .logo-strip {
@@ -156,6 +158,15 @@ body {
   margin-bottom: 10px;
 }
 
+.maps-link {
+  color: #c6a77d;
+  text-decoration: none;
+}
+
+.maps-link:hover {
+  text-decoration: underline;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -164,6 +175,100 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
   border-top: 1px solid #c6a77d;
   color: #ddd;
+}
+
+/* Galeria e Rreklamave */
+.gallery-ads {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.gallery-ads h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #c6a77d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background-color: rgba(198, 167, 125, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(198,167,125,0.5);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item p {
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Produktet */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background-color: rgba(198, 167, 125, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(198,167,125,0.5);
+  padding-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #c6a77d;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.3rem;
+}
+
+.product-card p {
+  padding: 0 15px;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+}
+
+.product-card .price {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #c6a77d;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
 }
 
 /* Responsive */
