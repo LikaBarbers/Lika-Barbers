@@ -1,153 +1,183 @@
+/* Trupi i faqes */
 body {
-  font-family: Arial, sans-serif;
-  background: #222;
-  color: white;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
 }
 
+/* Shiriti i logos */
 .logo-banner {
-  background: #111;
-  padding: 10px;
-  text-align: center;
-}
-
-.logo-strip {
-  max-width: 200px;
-  margin-bottom: 5px;
-}
-
-.logo-banner li {
-  list-style: none;
-  font-style: italic;
-  color: #ccc;
-}
-
-.background-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  min-height: 100vh;
-  padding: 20px;
-}
-
-.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 10px 0;
   display: flex;
-  justify-content: flex-start;
-  background-color: #111;
-  padding: 10px;
+  justify-content: center;
   align-items: center;
 }
 
+.logo-strip {
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* Background që fillon poshtë logos */
+.background-overlay {
+  background: url('20190714_130242.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.65);
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
 .menu-toggle {
-  font-size: 24px;
-  color: white;
-  background: none;
+  background-color: rgba(198, 167, 125, 0.9);
   border: none;
+  font-size: 2.2rem;
+  color: white;
+  border-radius: 10px;
+  padding: 6px 14px;
   cursor: pointer;
-  margin-right: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #b5955d;
 }
 
 .menu {
   list-style: none;
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  border: 1px solid #c6a77d;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  animation: slideDown 0.3s ease forwards;
+  min-width: 180px;
 }
 
 .menu li a {
-  color: white;
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
 .menu li a:hover {
-  color: #ff6600;
+  background-color: #c6a77d;
+  color: black;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ikonat e kontaktit */
 .contact-icons {
-  margin: 15px 0;
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  gap: 20px;
+  margin: 25px 0;
 }
 
 .icon-link {
   color: white;
-  font-size: 24px;
+  font-size: 1.8rem;
+  background-color: #c6a77d;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
   text-decoration: none;
 }
 
 .icon-link:hover {
-  color: #ff6600;
+  background-color: #b5955d;
+  color: #000;
 }
 
-.services, .info, .gallery, .products {
-  margin: 20px 0;
+/* Seksionet */
+.services, .products, .info {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
 }
 
-h2 {
-  border-bottom: 2px solid #ff6600;
+.services h2, .products h2, .info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c6a77d;
+  display: inline-block;
   padding-bottom: 5px;
 }
 
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+.services ul, .products ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
 }
 
-.gallery-grid a img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 5px;
-  border: 2px solid #444;
-  transition: border-color 0.3s;
+.services ul li, .products ul li {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
 }
 
-.gallery-grid a:hover img {
-  border-color: #ff6600;
-}
-
-.category-title {
-  margin-top: 30px;
-  font-size: 1.5rem;
-  color: #ffa500;
-  border-bottom: 1px solid #ffa500;
-  padding-bottom: 3px;
-}
-
-.product-card {
-  background-color: #333;
-  padding: 10px;
-  border-radius: 6px;
-  width: 220px;
-  text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.product-info h4 {
-  margin: 10px 0 5px;
-  color: #ffcc00;
-}
-
-.product-info p {
-  font-size: 0.9rem;
-  color: #ddd;
-  min-height: 40px;
-}
-
-.price {
+.services ul li::before, .products ul li::before {
+  content: "✓";
+  color: #c6a77d;
+  position: absolute;
+  left: 0;
   font-weight: bold;
-  color: #ff6600;
 }
 
+.info p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  margin-top: 40px;
-  color: #666;
+  padding: 15px 10px;
   font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #c6a77d;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .menu-toggle {
+    font-size: 1.8rem;
+  }
+
+  .icon-link {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+
+  .logo-strip {
+    max-height: 120px;
+  }
 }
