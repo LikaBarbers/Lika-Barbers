@@ -23,7 +23,7 @@ body {
 
 /* Background që fillon poshtë logos */
 .background-overlay {
-  background: url('20190714_130242.jpg') no-repeat center center fixed;
+  background: url('201.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.65);
   background-blend-mode: overlay;
