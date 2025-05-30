@@ -181,3 +181,18 @@ footer {
     max-height: 120px;
   }
 }
+/* Linku i adresës me ikonë të Maps */
+.maps-link {
+  color: #c6a77d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.maps-link i {
+  margin-right: 6px;
+}
+
+.maps-link:hover {
+  color: #b5955d;
+  text-decoration: underline;
+}
