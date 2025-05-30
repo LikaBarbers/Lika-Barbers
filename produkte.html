@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produktet | Lika Barbers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+</head>
+<body>
+  <div class="background-overlay">
+    <nav class="navbar">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="menu" id="mainMenu">
+        <li><a href="index.html">Kthehu te Faqja Kryesore</a></li>
+      </ul>
+    </nav>
+
+    <section class="products" id="products">
+      <h2>Produktet</h2>
+
+      <!-- Kategoria 1: Pomada & Stilim -->
+      <h3 class="category-title">Pomada & Stilim</h3>
+      <div class="gallery-grid">
+        <div class="product-card">
+          <a href="produkt1.jpg" data-lightbox="stilim" data-title="Pomadë flokësh">
+            <img src="produkt1.jpg" alt="Pomadë flokësh" />
+          </a>
+          <div class="product-info">
+            <h4>Pomadë flokësh</h4>
+            <p>Stilim i fortë, shkëlqim natyral.</p>
+            <span class="price">700 Lekë</span>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <a href="produkt4.jpg" data-lightbox="stilim" data-title="Spray stilues">
+            <img src="produkt4.jpg" alt="Spray stilues" />
+          </a>
+          <div class="product-info">
+            <h4>Spray stilues</h4>
+            <p>Mbajtje e lehtë, për çdo stil.</p>
+            <span class="price">450 Lekë</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kategoria 2: Kujdes për Mjekrën -->
+      <h3 class="category-title">Kujdes për Mjekrën</h3>
+      <div class="gallery-grid">
+        <div class="product-card">
+          <a href="produkt2.jpg" data-lightbox="mjekra" data-title="Vaj për mjekër">
+            <img src="produkt2.jpg" alt="Vaj për mjekër" />
+          </a>
+          <div class="product-info">
+            <h4>Vaj për mjekër</h4>
+            <p>Zbutje dhe hidratim natyral.</p>
+            <span class="price">500 Lekë</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kategoria 3: Shampo & Pastrim -->
+      <h3 class="category-title">Shampo & Pastrim</h3>
+      <div class="gallery-grid">
+        <div class="product-card">
+          <a href="produkt3.jpg" data-lightbox="shampo" data-title="Shampo për skalp">
+            <img src="produkt3.jpg" alt="Shampo për skalp" />
+          </a>
+          <div class="product-info">
+            <h4>Shampo për skalp</h4>
+            <p>Qetësim për skalp të ndjeshëm.</p>
+            <span class="price">600 Lekë</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2015 Lika Barbers</p>
+    </footer>
+  </div>
+
+  <script>
+    const menu = document.getElementById('mainMenu');
+    const toggleBtn = document.querySelector('.menu-toggle');
+
+    function toggleMenu() {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    document.addEventListener('click', function (event) {
+      const isClickInside = menu.contains(event.target) || toggleBtn.contains(event.target);
+      if (!isClickInside) {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
