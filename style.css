@@ -239,3 +239,25 @@ footer {
     width: 90%;
   }
 }
+/* Butoni për rezervim */
+.booking-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.booking-button {
+  background-color: #c6a77d;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.booking-button:hover {
+  background-color: #b5955d;
+  color: black;
+}
