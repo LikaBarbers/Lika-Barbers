@@ -52,6 +52,14 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+div {
+  background-image:
+    url(https://1drv.ms/i/c/3e2df9e57f880fdb/ESPkWt9zZBhCnV_5xb13LQ4BteiOGta4ToT1ZaZ8JAaVgA?e=3enzWE), url("main-back.png"); /* Applies two images to the background */
+  background-position:
+    top right,
+    0px 0px;
+  background-origin: content-box, padding-box;
+}
 
 .menu-toggle:hover {
   background-color: #b5955d;
