@@ -1,98 +1,62 @@
+
 const express = require("express");
 const multer = require("multer");
 const OpenAI = require("openai");
+const { toFile } = require("openai/uploads");
 const fs = require("fs");
 const cors = require("cors");
 
 const app = express();
 
-
-if (!fs.existsSync("uploads")) {
-
-fs.mkdirSync("uploads");
-
-}
-
 app.use(cors());
 
-const storage = multer.diskStorage({
 
-destination:function(req,file,cb){
-
-cb(null,"uploads/");
-
-},
-
-filename:function(req,file,cb){
-
-cb(
-null,
-Date.now()+".png"
-);
-
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
 }
-
-});
 
 
 const upload = multer({
-
-storage:storage
-
+  dest: "uploads/"
 });
-
 
 
 const openai = new OpenAI({
-
-apiKey:
-process.env.OPENAI_API_KEY
-
+  apiKey: process.env.OPENAI_API_KEY
 });
 
 
-
-
-
-app.post(
-"/hair-ai",
-
+app.post("/hair-ai",
 upload.single("photo"),
-
-async(req,res)=>{
-
+async (req,res)=>{
 
 try{
 
 
-const imagePath =
-req.file.path;
-
-
-
-const result =
-await openai.images.edit({
+const result = await openai.images.edit({
 
 model:"gpt-image-1",
 
 image:
-fs.createReadStream(
-imagePath
+await toFile(
+fs.createReadStream(req.file.path),
+"hair.png",
+{
+type:"image/png"
+}
 ),
-
 
 prompt:
 `
-Virtual barber try on.
+Virtual barber haircut preview.
 
-Keep the same face and identity.
+Keep the same person and face.
+Change only the hairstyle.
 
-Only change the hairstyle.
-
-New hairstyle:
+New haircut:
 ${req.body.style}
 
-Realistic professional haircut.
+Professional realistic barber result.
 `,
 
 size:"1024x1024"
@@ -100,59 +64,31 @@ size:"1024x1024"
 });
 
 
-
-
-
 res.json({
 
 image:
-
 "data:image/png;base64,"+
 result.data[0].b64_json
 
 });
 
 
-
-
 }
-
 
 catch(error){
 
-
 console.log(error);
 
-
 res.status(500).json({
-
 error:error.message
+});
+
+}
 
 });
 
 
-}
-
-
-}
-
-);
-
-
-
-
-
-
 app.listen(
-
 process.env.PORT || 3000,
-
-()=>{
-
-console.log(
-"Lika Barber AI ready"
-);
-
-}
-
+()=> console.log("AI Barber server ready")
 );
