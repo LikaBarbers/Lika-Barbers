@@ -15,9 +15,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </head>
 
-
 <body>
 
+
+<!-- LOGO -->
 
 <div class="logo-banner">
 
@@ -27,6 +28,9 @@ class="logo-strip">
 
 </div>
 
+
+
+<!-- REZERVIM -->
 
 <div class="booking-button-container">
 
@@ -43,14 +47,14 @@ Rezervo Një Takim
 
 
 
-
 <div class="background-overlay">
 
 
+<!-- MENU -->
+
 <nav class="navbar">
 
-<button 
-class="menu-toggle"
+<button class="menu-toggle"
 onclick="toggleMenu()">☰</button>
 
 
@@ -70,6 +74,7 @@ onclick="toggleMenu()">☰</button>
 
 
 
+<!-- KONTAKT -->
 
 <div class="contact-icons">
 
@@ -79,6 +84,7 @@ onclick="toggleMenu()">☰</button>
 
 
 <a href="https://wa.me/355692366263"
+target="_blank"
 class="icon-link">
 
 <i class="fab fa-whatsapp"></i>
@@ -87,15 +93,14 @@ class="icon-link">
 
 
 <a href="https://instagram.com/Lika.barbers"
+target="_blank"
 class="icon-link">
 
 <i class="fab fa-instagram"></i>
 
 </a>
 
-
 </div>
-
 
 
 
@@ -107,11 +112,7 @@ class="icon-link">
 
 <h2>Provo Modelin Para Qethjes 🤖✂️</h2>
 
-
-<p>
-Bëj një foto dhe provo prerjen e re
-</p>
-
+<p>Bëj foto dhe shiko modelin e ri</p>
 
 
 <button onclick="startAI()">
@@ -121,9 +122,7 @@ Hap Kamerën 📷
 </button>
 
 
-
 <br><br>
-
 
 
 <video
@@ -131,9 +130,7 @@ id="camera"
 autoplay
 playsinline
 style="display:none;">
-
 </video>
-
 
 
 <br>
@@ -150,13 +147,10 @@ Bëj Foto 📸
 
 
 
-
 <canvas
 id="photo"
 style="display:none;">
 </canvas>
-
-
 
 
 <img
@@ -165,37 +159,18 @@ style="display:none;">
 
 
 
+<br>
 
 
 <select
 id="hairStyle"
 style="display:none;">
 
-
-<option value="Skin Fade">
-Skin Fade
-</option>
-
-
-<option value="Low Fade">
-Low Fade
-</option>
-
-
-<option value="Buzz Cut">
-Buzz Cut
-</option>
-
-
-<option value="Textured Crop">
-Textured Crop
-</option>
-
-
-<option value="Curly Hair">
-Curly Hair
-</option>
-
+<option value="Skin Fade">Skin Fade</option>
+<option value="Low Fade">Low Fade</option>
+<option value="Buzz Cut">Buzz Cut</option>
+<option value="Textured Crop">Textured Crop</option>
+<option value="Curly Hair">Curly Hair</option>
 
 </select>
 
@@ -220,80 +195,47 @@ Ndrysho me AI 🤖✂️
 
 
 </section>
-
-
-
-
-
+<!-- SHERBIMET -->
 
 <section class="services" id="services">
 
-
 <h2>Shërbimet</h2>
 
-
 <ul>
-
 <li>Prerje floku</li>
-
 <li>Stilim mjekre</li>
-
 <li>Rroje tradicionale</li>
-
 <li>Pastrim fytyre me fill ose dyll</li>
-
 </ul>
-
 
 </section>
 
 
-
-
-
+<!-- INFO -->
 
 <section class="info" id="info">
 
-
 <h2>Info</h2>
 
-
 <p>
-
 <strong>Adresa:</strong>
-
-Komuna Parisit,
-Rruga Osman Myderizi,
-Tiranë
-
+Komuna Parisit, Rruga Osman Myderizi, Tiranë
 </p>
-
 
 <p>
-
 <strong>Orari:</strong>
-
 Hënë - Shtunë 10:00 - 21:00
-
 </p>
-
 
 </section>
 
 
-
-
 <footer>
-
 © 2017 Lika Barbers
-
 </footer>
 
 
-
 </div>
-
-
 
 
 
@@ -301,7 +243,6 @@ Hënë - Shtunë 10:00 - 21:00
 
 
 // MENU
-
 
 const menu =
 document.getElementById("mainMenu");
@@ -320,8 +261,7 @@ menu.style.display==="flex"
 
 
 
-
-// AI SYSTEM
+// AI BARBER
 
 
 let stream;
@@ -329,7 +269,6 @@ let stream;
 
 const video =
 document.getElementById("camera");
-
 
 
 
@@ -365,18 +304,12 @@ document.getElementById("photoBtn")
 
 catch(error){
 
-
-alert(
-"Lejo kamerën për të përdorur AI Barber"
-);
-
+alert("Lejo kamerën për AI Barber");
 
 }
 
 
 }
-
-
 
 
 
@@ -388,16 +321,12 @@ let canvas =
 document.getElementById("photo");
 
 
-
 canvas.width =
 video.videoWidth;
 
 
-
 canvas.height =
 video.videoHeight;
-
-
 
 
 canvas
@@ -406,35 +335,29 @@ canvas
 
 
 
-
-let img =
+document.getElementById("preview").src =
 canvas.toDataURL("image/png");
 
 
-
 document.getElementById("preview")
-.src = img;
+.style.display =
+"block";
 
 
 
-document.getElementById("preview")
-.style.display="block";
+// FIK KAMEREN
 
-
-
-
-// fik kamera
-
+if(stream){
 
 stream
 .getTracks()
 .forEach(track=>track.stop());
 
+}
 
 
 video.style.display =
 "none";
-
 
 
 document.getElementById("photoBtn")
@@ -442,11 +365,9 @@ document.getElementById("photoBtn")
 "none";
 
 
-
 document.getElementById("hairStyle")
 .style.display =
 "inline-block";
-
 
 
 document.getElementById("createBtn")
@@ -459,16 +380,12 @@ document.getElementById("createBtn")
 
 
 
-
-
 async function tryHair(){
-
 
 
 document.getElementById("aiResult")
 .innerHTML =
 "🤖 AI po ndryshon flokët...";
-
 
 
 let canvas =
@@ -483,6 +400,8 @@ let data =
 new FormData();
 
 
+// FOTO PNG E SAKTE
+
 data.append(
 "photo",
 blob,
@@ -491,20 +410,22 @@ blob,
 
 
 
+// MODELI
 
 data.append(
-"photo",
-blob
-);
 
-
-
-data.append(
 "style",
-document.getElementById("hairStyle").value
+
+document
+.getElementById("hairStyle")
+.value
+
 );
 
 
+
+
+try{
 
 
 let response =
@@ -523,29 +444,55 @@ body:data
 );
 
 
+
 let result =
 await response.json();
 
-console.log(result);
+
 
 if(result.image){
 
+
 document.getElementById("aiResult")
 .innerHTML =
+
 `
+
 <img src="${result.image}">
+
 `;
+
 
 }else{
 
+
 document.getElementById("aiResult")
 .innerHTML =
-"❌ AI nuk ktheu foto. Kontrollo serverin.";
+"❌ AI nuk ktheu foto.";
 
 }
 
 
-},"image/png");
+}
+
+
+
+catch(error){
+
+
+document.getElementById("aiResult")
+.innerHTML =
+"❌ Nuk lidhet me AI server.";
+
+}
+
+
+
+},
+
+"image/png"
+
+);
 
 
 
