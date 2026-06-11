@@ -23,7 +23,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <div class="logo-banner">
 
-<img src="file_00000000f11471fdb515d96974b3db3a.png"
+<img 
+src="file_00000000f11471fdb515d96974b3db3a.png"
+alt="Lika Barbers"
 class="logo-strip">
 
 </div>
@@ -34,7 +36,8 @@ class="logo-strip">
 
 <div class="booking-button-container">
 
-<a href="https://likabarbershop.setmore.com"
+<a 
+href="https://likabarbershop.setmore.com"
 target="_blank"
 class="booking-button">
 
@@ -50,37 +53,59 @@ Rezervo Një Takim
 <div class="background-overlay">
 
 
-
 <!-- MENU -->
 
 <nav class="navbar">
 
-<button class="menu-toggle"
-onclick="toggleMenu()">☰</button>
+
+<button 
+class="menu-toggle"
+onclick="toggleMenu()">
+
+☰
+
+</button>
 
 
-<ul class="menu" id="mainMenu">
 
-<li><a href="index.html">
+<ul 
+class="menu"
+id="mainMenu">
+
+
+<li>
+<a href="index.html">
 Menuja Kryesore
-</a></li>
+</a>
+</li>
 
-<li><a href="#services">
+
+<li>
+<a href="#services">
 Shërbimet
-</a></li>
+</a>
+</li>
 
-<li><a href="produkte.html">
+
+<li>
+<a href="produkte.html">
 Produktet
-</a></li>
+</a>
+</li>
 
-<li><a href="#info">
+
+<li>
+<a href="#info">
 Informacion mbi mua
-</a></li>
+</a>
+</li>
 
 
 </ul>
 
+
 </nav>
+
 
 
 
@@ -89,7 +114,9 @@ Informacion mbi mua
 
 <div class="contact-icons">
 
-<a href="tel:+355696002606"
+
+<a 
+href="tel:+355696002606"
 class="icon-link">
 
 <i class="fas fa-phone"></i>
@@ -97,7 +124,10 @@ class="icon-link">
 </a>
 
 
-<a href="https://wa.me/355692366263"
+
+<a
+href="https://wa.me/355692366263"
+target="_blank"
 class="icon-link">
 
 <i class="fab fa-whatsapp"></i>
@@ -105,14 +135,19 @@ class="icon-link">
 </a>
 
 
-<a href="https://instagram.com/Lika.barbers"
+
+<a
+href="https://instagram.com/Lika.barbers"
+target="_blank"
 class="icon-link">
 
 <i class="fab fa-instagram"></i>
 
 </a>
 
+
 </div>
+
 
 
 
@@ -127,29 +162,59 @@ Provo Modelin Para Qethjes 🤖✂️
 </h2>
 
 
-<video id="camera"
+<p>
+Shiko si dukesh me një stil të ri përpara prerjes.
+</p>
+
+
+
+<button onclick="startAI()">
+
+Hap AI Barber
+
+</button>
+
+
+
+<br><br>
+
+
+
+<video
+id="camera"
 autoplay
-playsinline>
+playsinline
+style="display:none;">
+
 </video>
 
 
-<select id="hairStyle">
+
+
+<select 
+id="hairStyle"
+style="display:none;">
+
 
 <option value="Skin Fade">
 Skin Fade
 </option>
 
+
 <option value="Low Fade">
 Low Fade
 </option>
+
 
 <option value="Buzz Cut">
 Buzz Cut
 </option>
 
+
 <option value="Textured Crop">
 Textured Crop
 </option>
+
 
 <option value="Curly Hair">
 Curly Hair
@@ -159,35 +224,39 @@ Curly Hair
 </select>
 
 
-<button onclick="tryHair()">
 
-Provo Me AI
+<br>
+
+
+
+<button
+id="createBtn"
+onclick="tryHair()"
+style="display:none;">
+
+Krijo Modelin ✂️
 
 </button>
 
 
-<canvas id="photo"
+
+<canvas
+id="photo"
 style="display:none;">
+
 </canvas>
 
 
 <div id="aiResult"></div>
 
 
+
 </section>
-
-
-
-
-
 <!-- SHERBIMET -->
-
 
 <section class="services" id="services">
 
-
 <h2>Shërbimet</h2>
-
 
 <ul>
 
@@ -201,14 +270,12 @@ style="display:none;">
 
 </ul>
 
-
 </section>
 
 
 
 
-<!-- GALERI -->
-
+<!-- GALERIA -->
 
 <section class="gallery-ads">
 
@@ -238,11 +305,10 @@ Prerje moderne me stil klasik
 <img src="2.jpg">
 
 <p>
-Stilim i mjekrës profesional
+Stilim i mjekrës me produkt profesional
 </p>
 
 </div>
-
 
 
 
@@ -251,18 +317,15 @@ Stilim i mjekrës profesional
 <img src="3.jpg">
 
 <p>
-Prerje trendi dhe stil unik
+Prerje trendi dhe stilim unik
 </p>
 
 </div>
 
 
-
 </div>
 
-
 </section>
-
 
 
 
@@ -280,7 +343,9 @@ Prerje trendi dhe stil unik
 
 <strong>Adresa:</strong>
 
-<a href="https://maps.app.goo.gl/EjnaZgU1NJCGK8W7A">
+<a 
+href="https://maps.app.goo.gl/EjnaZgU1NJCGK8W7A"
+target="_blank">
 
 Komuna Parisit,
 Rruga Osman Myderizi,
@@ -296,8 +361,7 @@ Tiranë
 
 <strong>Orari:</strong>
 
-Hënë - Shtunë
-10:00 - 21:00
+Hënë - Shtunë 10:00 - 21:00
 
 </p>
 
@@ -317,7 +381,6 @@ Hënë - Shtunë
 </footer>
 
 
-
 </div>
 
 
@@ -329,13 +392,11 @@ Hënë - Shtunë
 
 // MENU
 
-
 const menu =
 document.getElementById("mainMenu");
 
 
 function toggleMenu(){
-
 
 if(menu.style.display==="flex"){
 
@@ -352,8 +413,7 @@ menu.style.display="flex";
 
 
 
-
-// KAMERA
+// AI BARBER
 
 
 const video =
@@ -361,39 +421,67 @@ document.getElementById("camera");
 
 
 
-navigator.mediaDevices
-.getUserMedia({
+async function startAI(){
+
+
+try{
+
+
+let stream =
+await navigator.mediaDevices.getUserMedia({
 
 video:true
-
-})
-
-.then(stream=>{
-
-video.srcObject=stream;
 
 });
 
 
+video.srcObject = stream;
+
+
+video.style.display="block";
+
+
+document.getElementById("hairStyle")
+.style.display="inline-block";
+
+
+document.getElementById("createBtn")
+.style.display="inline-block";
+
+
+}
+
+catch(error){
+
+alert("Ju lutem lejoni kamerën për AI Barber");
+
+}
+
+
+}
 
 
 
-// AI HAIR
+
 
 
 async function tryHair(){
+
 
 
 let canvas =
 document.getElementById("photo");
 
 
+
 canvas.width =
 video.videoWidth;
 
 
+
 canvas.height =
 video.videoHeight;
+
 
 
 
@@ -410,8 +498,8 @@ video,
 
 document.getElementById("aiResult")
 .innerHTML =
-
 "🤖 Duke krijuar modelin...";
+
 
 
 
@@ -419,8 +507,10 @@ document.getElementById("aiResult")
 canvas.toBlob(async(blob)=>{
 
 
+
 let data =
 new FormData();
+
 
 
 data.append(
@@ -434,6 +524,7 @@ data.append(
 "style",
 document.getElementById("hairStyle").value
 );
+
 
 
 
@@ -468,7 +559,9 @@ document.getElementById("aiResult")
 `;
 
 
+
 });
+
 
 
 }
@@ -476,7 +569,6 @@ document.getElementById("aiResult")
 
 
 </script>
-
 
 
 </body>
