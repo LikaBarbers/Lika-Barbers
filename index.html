@@ -19,20 +19,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 
-<!-- LOGO -->
-
 <div class="logo-banner">
 
 <img 
 src="file_00000000f11471fdb515d96974b3db3a.png"
-alt="Lika Barbers"
 class="logo-strip">
 
 </div>
 
-
-
-<!-- REZERVIM -->
 
 <div class="booking-button-container">
 
@@ -53,81 +47,38 @@ Rezervo Një Takim
 <div class="background-overlay">
 
 
-<!-- MENU -->
-
 <nav class="navbar">
-
 
 <button 
 class="menu-toggle"
-onclick="toggleMenu()">
-
-☰
-
-</button>
+onclick="toggleMenu()">☰</button>
 
 
+<ul class="menu" id="mainMenu">
 
-<ul 
-class="menu"
-id="mainMenu">
+<li><a href="index.html">Menuja Kryesore</a></li>
 
+<li><a href="#services">Shërbimet</a></li>
 
-<li>
-<a href="index.html">
-Menuja Kryesore
-</a>
-</li>
+<li><a href="produkte.html">Produktet</a></li>
 
-
-<li>
-<a href="#services">
-Shërbimet
-</a>
-</li>
-
-
-<li>
-<a href="produkte.html">
-Produktet
-</a>
-</li>
-
-
-<li>
-<a href="#info">
-Informacion mbi mua
-</a>
-</li>
-
+<li><a href="#info">Informacion mbi mua</a></li>
 
 </ul>
-
 
 </nav>
 
 
 
 
-
-<!-- KONTAKT -->
-
 <div class="contact-icons">
 
-
-<a 
-href="tel:+355696002606"
-class="icon-link">
-
+<a href="tel:+355696002606" class="icon-link">
 <i class="fas fa-phone"></i>
-
 </a>
 
 
-
-<a
-href="https://wa.me/355692366263"
-target="_blank"
+<a href="https://wa.me/355692366263"
 class="icon-link">
 
 <i class="fab fa-whatsapp"></i>
@@ -135,10 +86,7 @@ class="icon-link">
 </a>
 
 
-
-<a
-href="https://instagram.com/Lika.barbers"
-target="_blank"
+<a href="https://instagram.com/Lika.barbers"
 class="icon-link">
 
 <i class="fab fa-instagram"></i>
@@ -157,20 +105,18 @@ class="icon-link">
 <section class="hair-ai">
 
 
-<h2>
-Provo Modelin Para Qethjes 🤖✂️
-</h2>
+<h2>Provo Modelin Para Qethjes 🤖✂️</h2>
 
 
 <p>
-Shiko si dukesh me një stil të ri përpara prerjes.
+Bëj një foto dhe provo prerjen e re
 </p>
 
 
 
 <button onclick="startAI()">
 
-Hap AI Barber
+Hap Kamerën 📷
 
 </button>
 
@@ -190,8 +136,38 @@ style="display:none;">
 
 
 
+<br>
 
-<select 
+
+<button
+id="photoBtn"
+onclick="takePhoto()"
+style="display:none;">
+
+Bëj Foto 📸
+
+</button>
+
+
+
+
+<canvas
+id="photo"
+style="display:none;">
+</canvas>
+
+
+
+
+<img
+id="preview"
+style="display:none;">
+
+
+
+
+
+<select
 id="hairStyle"
 style="display:none;">
 
@@ -234,29 +210,27 @@ id="createBtn"
 onclick="tryHair()"
 style="display:none;">
 
-Krijo Modelin ✂️
+Ndrysho me AI 🤖✂️
 
 </button>
 
 
 
-<canvas
-id="photo"
-style="display:none;">
-
-</canvas>
-
-
 <div id="aiResult"></div>
 
 
-
 </section>
-<!-- SHERBIMET -->
+
+
+
+
+
 
 <section class="services" id="services">
 
+
 <h2>Shërbimet</h2>
+
 
 <ul>
 
@@ -270,60 +244,6 @@ style="display:none;">
 
 </ul>
 
-</section>
-
-
-
-
-<!-- GALERIA -->
-
-<section class="gallery-ads">
-
-
-<h2>
-Reklama Prerjes dhe Stilimit
-</h2>
-
-
-<div class="gallery-grid">
-
-
-<div class="gallery-item">
-
-<img src="1.jpg">
-
-<p>
-Prerje moderne me stil klasik
-</p>
-
-</div>
-
-
-
-<div class="gallery-item">
-
-<img src="2.jpg">
-
-<p>
-Stilim i mjekrës me produkt profesional
-</p>
-
-</div>
-
-
-
-<div class="gallery-item">
-
-<img src="3.jpg">
-
-<p>
-Prerje trendi dhe stilim unik
-</p>
-
-</div>
-
-
-</div>
 
 </section>
 
@@ -331,7 +251,6 @@ Prerje trendi dhe stilim unik
 
 
 
-<!-- INFO -->
 
 <section class="info" id="info">
 
@@ -343,18 +262,11 @@ Prerje trendi dhe stilim unik
 
 <strong>Adresa:</strong>
 
-<a 
-href="https://maps.app.goo.gl/EjnaZgU1NJCGK8W7A"
-target="_blank">
-
 Komuna Parisit,
 Rruga Osman Myderizi,
 Tiranë
 
-</a>
-
 </p>
-
 
 
 <p>
@@ -371,14 +283,12 @@ Hënë - Shtunë 10:00 - 21:00
 
 
 
-
 <footer>
 
-<p>
 © 2017 Lika Barbers
-</p>
 
 </footer>
+
 
 
 </div>
@@ -392,32 +302,34 @@ Hënë - Shtunë 10:00 - 21:00
 
 // MENU
 
+
 const menu =
 document.getElementById("mainMenu");
 
 
 function toggleMenu(){
 
-if(menu.style.display==="flex"){
-
-menu.style.display="none";
-
-}else{
-
-menu.style.display="flex";
-
-}
+menu.style.display =
+menu.style.display==="flex"
+?
+"none"
+:
+"flex";
 
 }
 
 
 
 
-// AI BARBER
+// AI SYSTEM
+
+
+let stream;
 
 
 const video =
 document.getElementById("camera");
+
 
 
 
@@ -427,7 +339,7 @@ async function startAI(){
 try{
 
 
-let stream =
+stream =
 await navigator.mediaDevices.getUserMedia({
 
 video:true
@@ -435,25 +347,29 @@ video:true
 });
 
 
-video.srcObject = stream;
+video.srcObject =
+stream;
 
 
-video.style.display="block";
+video.style.display =
+"block";
 
 
-document.getElementById("hairStyle")
-.style.display="inline-block";
-
-
-document.getElementById("createBtn")
-.style.display="inline-block";
+document.getElementById("photoBtn")
+.style.display =
+"inline-block";
 
 
 }
+
 
 catch(error){
 
-alert("Ju lutem lejoni kamerën për AI Barber");
+
+alert(
+"Lejo kamerën për të përdorur AI Barber"
+);
+
 
 }
 
@@ -465,8 +381,7 @@ alert("Ju lutem lejoni kamerën për AI Barber");
 
 
 
-async function tryHair(){
-
+function takePhoto(){
 
 
 let canvas =
@@ -487,19 +402,77 @@ video.videoHeight;
 
 canvas
 .getContext("2d")
-.drawImage(
-video,
-0,
-0
-);
+.drawImage(video,0,0);
 
+
+
+
+let img =
+canvas.toDataURL("image/png");
+
+
+
+document.getElementById("preview")
+.src = img;
+
+
+
+document.getElementById("preview")
+.style.display="block";
+
+
+
+
+// fik kamera
+
+
+stream
+.getTracks()
+.forEach(track=>track.stop());
+
+
+
+video.style.display =
+"none";
+
+
+
+document.getElementById("photoBtn")
+.style.display =
+"none";
+
+
+
+document.getElementById("hairStyle")
+.style.display =
+"inline-block";
+
+
+
+document.getElementById("createBtn")
+.style.display =
+"inline-block";
+
+
+}
+
+
+
+
+
+
+async function tryHair(){
 
 
 
 document.getElementById("aiResult")
 .innerHTML =
-"🤖 Duke krijuar modelin...";
+"🤖 AI po ndryshon flokët...";
 
+
+
+let canvas =
+document.getElementById("photo");
 
 
 
@@ -528,20 +501,27 @@ document.getElementById("hairStyle").value
 
 
 
-
-  let response =
+let response =
 await fetch(
+
 "https://lika-ai-server.onrender.com/hair-ai",
+
 {
+
 method:"POST",
+
 body:data
-});
+
+}
+
+);
 
 
 
 
 let result =
 await response.json();
+
 
 
 
