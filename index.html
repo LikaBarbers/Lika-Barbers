@@ -517,24 +517,26 @@ body:data
 );
 
 
-
-
 let result =
 await response.json();
 
+console.log(result);
 
-
-
+if(result.image){
 
 document.getElementById("aiResult")
 .innerHTML =
-
 `
-
 <img src="${result.image}">
-
 `;
 
+}else{
+
+document.getElementById("aiResult")
+.innerHTML =
+"❌ AI nuk ktheu foto. Kontrollo serverin.";
+
+}
 
 
 });
