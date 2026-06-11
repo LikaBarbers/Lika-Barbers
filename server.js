@@ -3,12 +3,17 @@ const multer = require("multer");
 const OpenAI = require("openai");
 const fs = require("fs");
 const cors = require("cors");
-const path = require("path");
 
 const app = express();
 
-app.use(cors());
 
+if (!fs.existsSync("uploads")) {
+
+fs.mkdirSync("uploads");
+
+}
+
+app.use(cors());
 
 const storage = multer.diskStorage({
 
