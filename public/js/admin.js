@@ -45,7 +45,7 @@
   function fileToData(file) {
     return new Promise((resolve, reject) => {
       if (!file) return reject(new Error('Zgjidhni një foto.'));
-      if (file.size > 6 * 1024 * 1024) return reject(new Error('Fotoja është shumë e madhe. Maksimumi është 6 MB.'));
+      if (file.size > 4 * 1024 * 1024) return reject(new Error('Fotoja është shumë e madhe. Maksimumi është 4 MB.'));
       const reader = new FileReader();
       reader.onload = () => resolve({ name: file.name, type: file.type, data: reader.result });
       reader.onerror = () => reject(new Error('Fotoja nuk mund të lexohej.'));
