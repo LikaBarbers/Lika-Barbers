@@ -1,6 +1,0 @@
-node_modules/
-uploads/*
-!uploads/.gitkeep
-data/admin.json
-*.log
-.DS_Store
