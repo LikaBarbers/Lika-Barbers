@@ -1,0 +1,49 @@
+{
+  "schedule": {
+    "monday": { "open": "10:00", "close": "21:00", "closed": false },
+    "tuesday": { "open": "10:00", "close": "21:00", "closed": false },
+    "wednesday": { "open": "10:00", "close": "21:00", "closed": false },
+    "thursday": { "open": "10:00", "close": "21:00", "closed": false },
+    "friday": { "open": "10:00", "close": "21:00", "closed": false },
+    "saturday": { "open": "10:00", "close": "21:00", "closed": false },
+    "sunday": { "open": "10:00", "close": "21:00", "closed": true }
+  },
+  "gallery": [
+    {
+      "id": "gallery-1",
+      "image": "/images/gallery-1.webp",
+      "altSq": "Prerje moderne flokësh te Lika Barbershop në Tiranë",
+      "altEn": "Modern haircut at Lika Barbershop in Tirana",
+      "captionSq": "Prerje moderne me përfundim të pastër",
+      "captionEn": "Modern haircut with a clean finish"
+    },
+    {
+      "id": "gallery-2",
+      "image": "/images/gallery-2.webp",
+      "altSq": "Stilim profesional mjekre te Lika Barbershop",
+      "altEn": "Professional beard styling at Lika Barbershop",
+      "captionSq": "Konture precize dhe stilim profesional i mjekrës",
+      "captionEn": "Sharp lines and professional beard styling"
+    },
+    {
+      "id": "gallery-3",
+      "image": "/images/gallery-3.webp",
+      "altSq": "Shërbim kujdesi për meshkuj në Lika Barbershop Tiranë",
+      "altEn": "Men's grooming service at Lika Barbershop Tirana",
+      "captionSq": "Kujdes i plotë për një pamje të freskët",
+      "captionEn": "Complete grooming for a fresh look"
+    }
+  ],
+  "promotions": [
+    {
+      "id": "welcome-offer",
+      "titleSq": "Rezervo stilin tënd të radhës",
+      "titleEn": "Book your next fresh look",
+      "descriptionSq": "Zgjidh orarin online dhe eja pa pritje të panevojshme.",
+      "descriptionEn": "Choose your appointment online and avoid unnecessary waiting.",
+      "link": "https://likabarbershop.setmore.com",
+      "image": "/images/gallery-2.webp",
+      "active": true
+    }
+  ]
+}
