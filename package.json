@@ -1,0 +1,15 @@
+{
+  "name": "lika-barbers-netlify",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Bilingual Lika Barbershop website with a Netlify Functions admin panel and Netlify Blobs storage",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^10.7.9"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
