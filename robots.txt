@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /admin.html
-Disallow: /api/admin/
-
-Sitemap: https://likabarbers.com/sitemap.xml
