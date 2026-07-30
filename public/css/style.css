@@ -141,7 +141,7 @@ button, input, textarea { font: inherit; }
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url('/images/gallery-2.webp') center 37% / cover no-repeat;
+  background: url('/images/og-lika-barbers.jpg') center 37% / cover no-repeat;
   filter: saturate(.8) contrast(1.05);
 }
 .hero::after {
